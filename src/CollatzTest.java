@@ -7,10 +7,11 @@ public class CollatzTest {
 	@Test
 	public void test() {
 		Collatz c = new Collatz();
+		//c.numberList.add(13);
 		
 		
-		System.out.println("Geben Sie aus: "+c.FormelZurBerechnung(12));
-		System.out.println();
+		System.out.println(c.FormelZurBerechnung(13));
+		
 		
 		
 	}

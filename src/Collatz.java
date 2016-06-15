@@ -8,6 +8,7 @@ public class Collatz {
 	int ungerade;
 	int gerade;
 	int newNumber;
+	
 	StringArrayStack stack = new StringArrayStack(number);
 	
 	//ArrayList<Integer> numberList = new ArrayList<>();
@@ -29,13 +30,43 @@ public class Collatz {
 		}
 		return number;
 	}
-	/*
-	public void addNumbers(){
-		for(int number: numberList){
-			numberList.addAll(number, numberList);
+	protected String[] Stack = null;
+	protected int pointer;
+	
+	
+	public boolean isEmpty(){
+		return pointer == 0;
+	}
+	
+	public void push(int number){
+		Stack[pointer] = s;
+		pointer++;
+	}
+	
+	public String pop(){
+		String s;
+		if(isEmpty()){
+			System.out.println("Error: Stack Underflow");
+			return null;
+		}else{
+			pointer--;
+			s = Stack[pointer];
+			Stack[pointer] = null;
+			return s;
 		}
 	}
-	*/
+	
+	public String peek(){
+		String s;
+		if(isEmpty()){
+			System.out.println("Error: Stack Underflow");
+			return null;
+		}else{
+			s = Stack[pointer-1];
+			return s;
+		}
+	}
+		
 
 	
 }
